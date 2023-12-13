@@ -38,6 +38,10 @@ try{
         case '/addtask':
             $endpoint = new AddTask($db);
             break;
+        case '/delete/':
+        case '/delete':
+            $endpoint = new DeleteTask($db);
+            break;
         default:
             $endpoint = new ClientError("Path not found: " . $path, 404);
     }
