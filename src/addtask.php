@@ -53,6 +53,6 @@ class AddTask extends Endpoint
         $sql = "INSERT INTO tasks (title,description,completed,createdAt)
                 VALUES (:title, :description, :completed, :createdAt)";
         $this->setSQL($sql);
-        $this->setSQLParams(['title'=> $_POST['title'],'description'=> $_POST['description'],'completed'=> $_POST['completed'],'createdAt'=> $_POST['createdAt']]);
+        $this->setSQLParams(['title'=> $_POST['title'],'description'=> $_POST['description'],'completed'=> false,'createdAt'=> $_POST['createdAt']]);
     }
 }

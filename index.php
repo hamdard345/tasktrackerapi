@@ -46,6 +46,10 @@ try {
         case '/alltasks':
             $endpoint = new AllTasks($db);
             break;
+            case '/complete/':
+            case '/complete':
+            $endpoint = new CompleteTask($db);
+            break;
         default:
             $endpoint = new ClientError("Path not found: " . $path, 404);
     }
